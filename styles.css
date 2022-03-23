@@ -1,0 +1,145 @@
+
+
+:root {
+    --clr-light: #f2f2f2;
+    --clr-orange: #e28525;
+    --clr-tyrkys: #016972;
+    --clr-darkTyr: #00403f;
+
+    --ff-title: "Bebas", sans-serif;
+    --ff-primary: "Poppins", sans-serif;
+
+    --border-radius: .75rem;
+}
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--ff-primary);
+}
+
+body {
+    width: 100%;
+    background-color: var(--clr-light);
+    padding-block: 3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.attribution {
+    margin-top: 5rem;
+}
+
+.card-container {
+    width: 90vw;
+    max-width: 30.5rem;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 4.5rem;
+    color: #fff;
+    width: 100%;
+}
+
+.card:nth-child(1) {
+    background-color: var(--clr-orange);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.card:nth-child(2) {
+    background-color: var(--clr-tyrkys);
+}
+
+.card:nth-child(3) {
+    background-color: var(--clr-darkTyr);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.card-title {
+    font-family: var(--ff-title);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-block: 3rem;
+}
+
+.card-content {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 25ch;
+    margin-bottom: 3rem;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: .95rem 3rem;
+    border-radius: 4rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: var(--clr-light);
+    border: .15rem solid var(--clr-light);
+}
+
+.card:nth-child(1) .card-btn {
+    color: var(--clr-orange);
+}
+
+.card:nth-child(2) .card-btn {
+    color: var(--clr-tyrkys);
+}
+
+.card:nth-child(3) .card-btn {
+    color: var(--clr-darkTyr);
+}
+
+.card:nth-child(1) .card-btn:hover,
+.card:nth-child(2) .card-btn:hover,
+.card:nth-child(3) .card-btn:hover {
+    background-color: transparent;
+    color: var(--clr-light);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .card-container {
+        display: flex;
+        max-width: 80rem;
+    }
+
+    .card:nth-child(1) {
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: 0;
+        border-bottom-left-radius: var(--border-radius);
+    }
+
+    .card:nth-child(3) {
+        border-bottom-right-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+        border-bottom-left-radius: 0;
+    }
+
+    .card-btn {
+        margin-top: 4rem;
+    }
+}
